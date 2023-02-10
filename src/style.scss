@@ -17,16 +17,16 @@ a {
 .home {
   width: 80%;
   margin: 0 auto;
-  
+
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:30px 0;
+    margin: 30px 0;
     &__logo {
     }
     &__navbar {
-        margin-right: 60px;
+      margin-right: 60px;
       &__items {
         display: flex;
         justify-content: space-between;
@@ -53,7 +53,7 @@ a {
     margin-bottom: 40px;
     &__left {
       width: 60%;
-      
+
       &__image {
         img {
           width: 100%;
@@ -67,7 +67,7 @@ a {
         align-items: flex-start;
         &__ques {
           width: 50%;
-          .question{
+          .question {
             font-size: 2.8rem;
             font-weight: 1000;
           }
@@ -91,14 +91,13 @@ a {
       }
     }
     &__side {
-       
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: #24253b;
       color: white;
       height: 100%;
-      .side__heading{
+      .side__heading {
         color: #f2a643;
         font-size: 2.6rem;
         font-weight: bolder;
@@ -109,70 +108,68 @@ a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-       gap: 30px;
-       
-        .items{
-            display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid grey;
-        .heading{
+        gap: 30px;
+
+        .items {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+          padding-bottom: 30px;
+          border-bottom: 1px solid grey;
+          .heading {
             text-transform: capitalize;
             font-weight: 1000;
-        }
-        .des{
+          }
+          .des {
             font-weight: lighter;
             color: rgb(219, 216, 216);
+          }
         }
-        }
-        .last{
-            border: none;
+        .last {
+          border: none;
         }
       }
     }
   }
-  .categories{
+  .categories {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
     margin-right: 60px;
-    
-    .category{
-        
+
+    .category {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+      .image {
+        img {
+          width: 100px;
+          height: 150px;
+        }
+      }
+      .content {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
-        .image{
-            img{
-                width: 100px;
-                height: 150px;
-            }
-        }
-        .content{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-        }
+        gap: 10px;
+      }
     }
   }
-
 }
-@media(max-width:980px){
-  .home{
-    width:95%;
-    .header{
+@media (max-width: 980px) {
+  .home {
+    width: 95%;
+    .header {
       margin: 20px 0;
-      &__navbar{
+      &__navbar {
         position: relative;
-        &__items{
+        &__items {
           display: none;
         }
-        &__items_mobile{
+        &__items_mobile {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -182,54 +179,52 @@ a {
           background: #fff;
           width: 90vw;
           padding: 20px;
-          
-          .nav__item{
-           
+
+          .nav__item {
             font-size: 1.2rem;
           }
-          .nav__item:hover{
-            color: #f5493b;   
+          .nav__item:hover {
+            color: #f5493b;
           }
         }
       }
-      .nav__mobile{
-        display:block;
+      .nav__mobile {
+        display: block;
         position: relative;
         z-index: 1;
       }
     }
-    .main{
+    .main {
       height: auto;
       flex-direction: column;
       align-items: flex-start;
-      &__left{
+      &__left {
         width: 100%;
-        &__image{
-          img{
+        &__image {
+          img {
             height: fit-content;
           }
         }
-        &__content{
+        &__content {
           flex-direction: column;
-          &__ques{
+          &__ques {
             width: 100%;
           }
-          &__ans{
+          &__ans {
             width: 100%;
           }
         }
       }
-      &__side{
+      &__side {
         width: 100%;
         align-items: flex-start;
         padding: 20px;
-        .side__items{
+        .side__items {
           width: 100%;
         }
       }
-      
     }
-    .categories{
+    .categories {
       flex-direction: column;
       align-items: flex-start;
       margin-right: 0px;

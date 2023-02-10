@@ -16,8 +16,11 @@ const Home = () => {
         <div className="header__logo">
           <img src={logo} alt="logo" />
         </div>
-        <nav className="header__navbar" onClick={() => setIsOpen(!isOpen)}>
-          <ul className={isOpen?"header__navbar__items_mobile":"header__navbar__items"}>
+        <nav className="header__navbar">
+          <ul
+            className={
+              isOpen ? "header__navbar__items_mobile" : "header__navbar__items"
+            }>
             <li className="nav__item">Home</li>
             <li className="nav__item">New</li>
             <li className="nav__item">Popular</li>
