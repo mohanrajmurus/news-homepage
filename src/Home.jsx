@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./images/logo.svg";
 import open_menu from "./images/icon-menu.svg";
 import close_menu from "./images/icon-menu-close.svg";
 import main_img from "./images/image-web-3-desktop.jpg";
-import pc from './images/image-retro-pcs.jpg';
-import laptop from './images/image-top-laptops.jpg';
+import pc from "./images/image-retro-pcs.jpg";
+import laptop from "./images/image-top-laptops.jpg";
 
-import gaming from './images/image-gaming-growth.jpg';
+import gaming from "./images/image-gaming-growth.jpg";
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="home">
       <header className="header">
         <div className="header__logo">
           <img src={logo} alt="logo" />
         </div>
-        <nav className="header__navbar">
-          <ul className="header__navbar__items">
+        <nav className="header__navbar" onClick={() => setIsOpen(!isOpen)}>
+          <ul className={isOpen?"header__navbar__items_mobile":"header__navbar__items"}>
             <li className="nav__item">Home</li>
             <li className="nav__item">New</li>
             <li className="nav__item">Popular</li>
@@ -24,9 +25,12 @@ const Home = () => {
             <li className="nav__item">Categories</li>
           </ul>
         </nav>
-        <div className="nav__mobile">
-          <img src={open_menu} alt="open" />
-          <img src={close_menu} alt="close" />
+        <div className="nav__mobile" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <img src={close_menu} alt="close" />
+          ) : (
+            <img src={open_menu} alt="open" />
+          )}
         </div>
       </header>
       <main className="main">
@@ -63,7 +67,7 @@ const Home = () => {
                 will hydrogen-fueled cars ever catch up to EVs?
               </p>
             </li>
-            <li className="items">
+            <li className="items last">
               <h3 className="heading">Hydrogen vs electric cars</h3>
               <p className="des">
                 will hydrogen-fueled cars ever catch up to EVs?
@@ -79,7 +83,7 @@ const Home = () => {
           </div>
           <div className="content">
             <h1 className="num">01</h1>
-            <h1 className="heading">Reviving Retro PCs</h1>
+            <h3 className="heading">Reviving Retro PCs</h3>
             <p>What happens when old PCs are given modern upgrades</p>
           </div>
         </div>
@@ -89,17 +93,17 @@ const Home = () => {
           </div>
           <div className="content">
             <h1 className="num">02</h1>
-            <h1 className="heading">Reviving Retro PCs</h1>
+            <h3 className="heading">Reviving Retro PCs</h3>
             <p>What happens when old PCs are given modern upgrades</p>
           </div>
         </div>
         <div className="category">
           <div className="image">
-            <img src={gaming} alt='gaming' />
+            <img src={gaming} alt="gaming" />
           </div>
           <div className="content">
             <h1 className="num">03</h1>
-            <h1 className="heading">Reviving Retro PCs</h1>
+            <h3 className="heading">Reviving Retro PCs</h3>
             <p>What happens when old PCs are given modern upgrades</p>
           </div>
         </div>
